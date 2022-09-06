@@ -19,16 +19,18 @@ public class App {
 		System.out.println("secondVar = " + secondVar);
 
 		// fibonazzi recursion
-		System.out.println(fibonazzi((byte) 50));
+		System.out.println(fibonazzi((byte) 55));
 	}
-
 	public static long fibonazzi(byte N) {
-		if (N == 0) {
-			return 0;
-		} else if (N == 1) {
-			return 1;
-		} else {
-			return fibonazzi((byte) (N - 1)) + fibonazzi((byte) (N - 2));
-		}
+		return (N <= 1) ? N : fibonazzi((byte) (N - 1)) + fibonazzi((byte) (N - 2));
 	}
+//	public static long fibonazzi(byte N) {
+//		if (N == 0) {
+//			return 0;
+//		} else if (N == 1) {
+//			return 1;
+//		} else {
+//			return fibonazzi((byte) (N - 1)) + fibonazzi((byte) (N - 2));
+//		}
+//	}
 }
