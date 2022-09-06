@@ -19,7 +19,7 @@ public class App {
 		System.out.println("secondVar = " + secondVar);
 
 		// fibonazzi recursion
-		System.out.println(fibonazzi((byte) 55));
+		System.out.println(fibonazzi((byte) 45));
 	}
 	public static long fibonazzi(byte N) {
 		return (N <= 1) ? N : fibonazzi((byte) (N - 1)) + fibonazzi((byte) (N - 2));
