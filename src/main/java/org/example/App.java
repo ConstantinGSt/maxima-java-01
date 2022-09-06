@@ -18,7 +18,7 @@ public class App {
 		System.out.println("firstVar = " + firstVar);
 		System.out.println("secondVar = " + secondVar);
 
-		// fibonazzi recursive
+		// fibonazzi recursion
 		System.out.println(fibonazzi((byte) 50));
 	}
 
