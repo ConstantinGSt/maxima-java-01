@@ -11,6 +11,7 @@ public class App {
 	public static void main(String[] args) {
 		int num;
 		arrayCreat(15);
+		System.out.println(maxDigitsSumPosition(arr));
 
 		System.out.println(daysCount((byte) 9, 1324));
 		System.out.println(isSimple(81));
@@ -55,14 +56,22 @@ public class App {
 	}
 	public static byte maxDigitsSumPosition(int[] arr) {
 		int[] sum = new int[arr.length];
-		for(int i = 0; i < arr.length; i++) {
+		int max = sum[sum.length-1];
+		byte maxIndex = 0;
+		for(int i = arr.length-1; i >=0 ; i--) {
 			int tempNum = arr[i];
-			while(tempNum>0) {
+			while(tempNum > 0) {
 				sum[i] += tempNum % 10;
-				tempNum /=10;
+				tempNum /= 10;
+			}
+			if(max < sum[i]) {
+				max = sum[i];
+				maxIndex = (byte) i;
 			}
 		}
+		return maxIndex;
 	}
+}
 //		int firstVar = 10;
 //		int secondVar = 15;
 //		System.out.println("firstVar = " + firstVar);
@@ -89,4 +98,4 @@ public class App {
 //			return fibonazzi((byte) (N - 1)) + fibonazzi((byte) (N - 2));
 //		}
 
-}
+
