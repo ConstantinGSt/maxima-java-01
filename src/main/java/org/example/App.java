@@ -54,7 +54,14 @@ public class App {
 		}  return arr;
 	}
 	public static byte maxDigitsSumPosition(int[] arr) {
-
+		int[] sum = new int[arr.length];
+		for(int i = 0; i < arr.length; i++) {
+			int tempNum = arr[i];
+			while(tempNum>0) {
+				sum[i] += tempNum % 10;
+				tempNum /=10;
+			}
+		}
 	}
 //		int firstVar = 10;
 //		int secondVar = 15;
