@@ -13,14 +13,14 @@ public class App {
 		arrayCreat(15);
 		System.out.println(maxDigitsSumPosition(arr));
 
-		System.out.println(daysCount((byte) 9, 1324));
-		System.out.println(isSimple(81));
+		System.out.println(daysCount((byte) 2, 1900));
+		System.out.println(isSimple(4));
 
 	}
 	public static byte daysCount(byte month, int year) {
 		switch(month) {
 			case 2:
-				if((year % 4 == 0 && year % 100 != 100) || year % 400 == 0) {
+				if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
 					return 29;
 				} return 28;
 			case 4:
@@ -34,16 +34,13 @@ public class App {
 	}
 
 	public static int isSimple(int n) {
-		int minDevider = 0;
+		int minDevider = 1;
 		int divider = 0;
 		for(int i = 2; i <= n; i++) {
 			if(n % i == 0) {
 				divider++;
-				if(minDevider == 0) {
-					minDevider = i;
-				}
 			} else if(divider > 2) {
-				return minDevider;
+				return devider = ;
 			}
 		} return 0;
 	}
