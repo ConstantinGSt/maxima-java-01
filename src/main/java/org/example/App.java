@@ -35,14 +35,14 @@ public class App {
 
 	public static int isSimple(int n) {
 		int result=1;
-		for (int i = 2; i <= n; i++) {
+		for(int i = 2; i <= n/2; i++) {
 			if ((n % i == 0) && (i < n)) {
-				result = i;
-				break;
+				return i;
+				//break;
 			} else if((n % i == 0) && (i == n)) {
-				result = 0;
+				return 0;
 			}
-		} return result;
+		} //return result;
 	}
 
 	public static int[] arrayCreat(int num) {
