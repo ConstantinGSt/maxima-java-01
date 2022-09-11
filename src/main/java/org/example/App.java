@@ -14,7 +14,7 @@ public class App {
 		System.out.println(maxDigitsSumPosition(arr));
 
 		System.out.println(daysCount((byte) 2, 1900));
-		System.out.println(isSimple(111));
+		System.out.println(isSimple(9));
 
 	}
 	public static byte daysCount(byte month, int year) {
@@ -35,13 +35,11 @@ public class App {
 
 	public static int isSimple(int n) {
 		int i=2;
-		for(; i <= n; i++) {
-			if ((n % i == 0) && (i < n)) {
-				break;
-			} else if((n % i == 0) && (i == n)) {
-				return 0;
+		for(; i < n / 2; i++) {
+			if(n % i == 0) {
+				return i;
 			}
-		} return i;
+		} return 0;
 	}
 
 	public static int[] arrayCreat(int num) {
